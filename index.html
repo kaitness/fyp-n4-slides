@@ -226,17 +226,32 @@ h2.section em { font-style: italic; color: var(--gold-deep); font-weight: 400; }
 .section-divider.p3 .pillar-rule { background: var(--blue); }
 
 /* STANZAS */
-.stanzas { display: flex; flex-direction: column; gap: 2rem; max-width: 1200px; }
+.stanzas-header {
+  display: flex; align-items: baseline; gap: 2rem; margin-bottom: 2.5rem;
+  border-bottom: 2px solid var(--rose); padding-bottom: 1.5rem;
+}
+.stanzas-header .me-too {
+  font-family: 'Fraunces', serif; font-style: italic; font-weight: 400;
+  font-size: clamp(3rem, 5.5vw, 5.5rem); color: var(--rose-deep);
+  line-height: 1; letter-spacing: -0.02em;
+}
+.stanzas-header .me-too-sub {
+  font-family: 'Inter', sans-serif; font-size: 0.95rem;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--rose-deep); font-weight: 700;
+}
+.stanzas { display: flex; flex-direction: column; gap: 1.6rem; max-width: 1300px; }
 .stanza {
   font-family: 'Fraunces', serif; font-weight: 300;
-  font-size: clamp(1.6rem, 2.2vw, 2.2rem); line-height: 1.3; color: var(--ink);
-  padding-left: 2rem; border-left: 3px solid var(--rose);
+  font-size: clamp(1.5rem, 2vw, 2rem); line-height: 1.35; color: var(--ink);
+  padding: 1.4rem 1.8rem; background: var(--rose-soft);
+  border-left: 4px solid var(--rose); border-radius: 2px;
 }
-.stanza em { font-style: italic; color: var(--rose-deep); font-weight: 400; }
+.stanza em { font-style: italic; color: var(--rose-deep); font-weight: 500; }
 .stanza .answer {
-  display: block; margin-top: 0.6rem; font-style: italic;
-  font-size: clamp(1.1rem, 1.4vw, 1.4rem); color: var(--rose-deep); letter-spacing: 0.02em;
-  font-weight: 400;
+  display: block; margin-top: 0.7rem; font-style: italic;
+  font-size: clamp(1.3rem, 1.7vw, 1.7rem); color: var(--rose-deep);
+  letter-spacing: 0.01em; font-weight: 500;
 }
 
 /* HAMMER */
@@ -514,17 +529,20 @@ h2.section em { font-style: italic; color: var(--gold-deep); font-weight: 400; }
 </section>
 
 <!-- 5. If you've ever stanzas -->
-<section class="slide">
-  <p class="eyebrow" style="color:var(--rose-deep)">If this is you</p>
+<section class="slide theme-cream">
+  <div class="stanzas-header">
+    <div class="me-too">Me too<span style="color:var(--rose)">.</span></div>
+    <div class="me-too-sub">If this is you · Pillar 1</div>
+  </div>
   <div class="stanzas">
     <div class="stanza">If you've ever loved someone <em>so much</em> the thought of losing them made you <em>perform</em> —
-      <span class="answer">I have been there.</span>
+      <span class="answer">→ I have been there.</span>
     </div>
     <div class="stanza">If your security was coming from <em>them being with you</em> —
-      <span class="answer">me too.</span>
+      <span class="answer">→ me too.</span>
     </div>
     <div class="stanza">If you've ever <em>shrunk yourself</em> to be more chooseable —
-      <span class="answer">I have been there too.</span>
+      <span class="answer">→ I have been there too.</span>
     </div>
   </div>
 </section>
@@ -550,10 +568,10 @@ h2.section em { font-style: italic; color: var(--gold-deep); font-weight: 400; }
   <p class="lede" style="margin-top:3rem; text-align:center">Not striving for it. Not performing for it.<br><em>Knowing</em> it.</p>
 </section>
 
-<!-- 8. Trophy / Project / Beloved hammer — INK theme with rose accent for high contrast -->
+<!-- 8. Godfidence hammer — INK theme with rose + gold accents -->
 <section class="slide center theme-ink">
   <div class="accent-strip left" style="background:var(--rose)"></div>
-  <div class="hammer" style="font-size:clamp(3.5rem, 6.5vw, 6.5rem); max-width:24ch">You are not the <em style="color:var(--rose)">trophy</em>.<br>You are not the <em style="color:var(--rose)">project</em>.<br>You are the <em style="color:var(--gold)">beloved</em>.</div>
+  <div class="hammer" style="font-size:clamp(3rem, 5.8vw, 5.8rem); max-width:26ch">You don't need them to <em style="color:var(--rose)">choose you</em>.<br>You know that you are the <em style="color:var(--gold)">beloved</em>.</div>
   <p class="lede" style="margin-top:3rem; text-align:center">That's <em>godfidence</em>. And the right person will be <em>honored</em> to walk beside you.</p>
 </section>
 
@@ -605,14 +623,14 @@ h2.section em { font-style: italic; color: var(--gold-deep); font-weight: 400; }
 <section class="slide center theme-sage-deep">
   <p class="kicker" style="color:var(--gold)">You're looking for a</p>
   <div class="solemate-grid">
-    <div class="solemate-side">
-      <div class="solemate-word"><em>sole</em> mate</div>
-      <div class="sm-label">someone to walk in stride</div>
-    </div>
-    <div class="solemate-arrow">→</div>
     <div class="solemate-side cross">
       <div class="solemate-word sm-word"><em>soul</em> mate</div>
       <div class="sm-label">someone to complete you</div>
+    </div>
+    <div class="solemate-arrow">→</div>
+    <div class="solemate-side">
+      <div class="solemate-word"><em>sole</em> mate</div>
+      <div class="sm-label">someone to walk in stride</div>
     </div>
   </div>
   <p class="lede" style="margin-top:3rem; text-align:center; max-width:38ch; font-style:italic">The feelings come and go.<br>The <em>direction</em> is what holds.</p>
